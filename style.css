@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f1f5f9;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.header,
+.footer {
+  background-color: #26364a;
+  color: white;
+  text-align: center;
+  padding: 24px 20px;
+}
+
+.header h1 {
+  margin-bottom: 5px;
+}
+
+.nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 10px;
+  background-color: #34495e;
+  padding: 12px;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+}
+
+.nav a:hover {
+  background-color: #4c6682;
+}
+
+.main-container {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+}
+
+.content {
+  flex: 3;
+  min-width: 0;
+  padding: 25px;
+}
+
+.content h2,
+.sidebar h2 {
+  margin-bottom: 12px;
+}
+
+.article {
+  margin-top: 20px;
+  padding: 18px;
+  background-color: #f8fafc;
+  border-left: 4px solid #3498db;
+  border-radius: 5px;
+}
+
+.article h3 {
+  margin-bottom: 8px;
+}
+
+.sidebar {
+  flex: 1;
+  min-width: 0;
+  padding: 25px;
+  background-color: #e8eef5;
+}
+
+.sidebar ul {
+  margin: 15px 0 0 20px;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  color: #2463a6;
+  text-decoration: none;
+}
+
+.footer {
+  margin-top: auto;
+}
+
+/* Responsive cho điện thoại và máy tính bảng */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .content,
+  .sidebar {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nav a {
+    text-align: center;
+  }
+
+  .header,
+  .footer {
+    padding: 18px 12px;
+  }
+
+  .content,
+  .sidebar {
+    padding: 20px;
+  }
+}
